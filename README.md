@@ -55,3 +55,17 @@ O se puede utilizar el operador OR
 `SELECT * FROM usuario WHERE nombre LIKE '___a'`
 
 ![Consulta8](img/imagen9.png.png "consulta8")
+
+9. si se desea obtener los registros cuya identificacion este entre el inte clausula BETWEEN, que sirve para identificar un intervalo de valores
+
+`SELECT * FROM `usuario` WHERE identificacion BETWEEN '110' AND '150'`
+
+![Consulta9](img/imagen10.png.png "consulta9")
+
+## COMANDO DELTE
+
+10. Para eliminar solamente los registros cuya identificacion sea mayor de 130
+
+`DELETE FROM `usuario` WHERE identificacion>130`
+
+![Consulta10](img/imagen11.png.png "consulta10")
