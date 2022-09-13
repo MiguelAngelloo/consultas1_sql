@@ -26,3 +26,10 @@
 `SELECT apellidos FROM usuario WHERE apellidos IN ('vanegas', 'cetina')`
 
 ![Consulta4](img/imagen5.png "consulta4")
+
+O se puede utilizar el operador OR
+
+`SELECT apellidos FROM usuario WHERE apellidos='vanegas' OR apellidos='cetina'`
+
+![Consulta4](img/imagen5.2.png.png "consulta4")
+
