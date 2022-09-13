@@ -20,3 +20,9 @@
 `SELECT * FROM usuario WHERE identification>='150'`
 
 ![Consulta3](img/imagen3.png "consulta3")
+
+4. si se desea obtener los registros cuyos apellidos sean vanegas o cetinas se debe utilizar el operador in que especifica los registros que se quieren visualizar de una tabla.
+
+`SELECT apellidos FROM usuario WHERE apellidos IN ('vanegas', 'cetina')`
+
+![Consulta4](img/imagen5.png "consulta4")
