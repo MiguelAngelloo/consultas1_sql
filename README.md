@@ -31,36 +31,36 @@ O se puede utilizar el operador OR
 
 `SELECT apellidos FROM usuario WHERE apellidos='vanegas' OR apellidos='cetina'`
 
-![Consulta4](img/imagen5.2.png.png "consulta4")
+![Consulta4](img/imagen5.2.png "consulta4")
 
 5. si se desea obtener los registros cuya identificacion sea menor que 110 y la ciudad sea cali se debe utilizar el operadir and.
 
 `SELECT * FROM usuario WHERE identificacion<150 AND ciudad_nac='Cali'`
 
-![Consulta5](img/imagen6.png.png "consulta5")
+![Consulta5](img/imagen6.png "consulta5")
 
 6. si se desea obener los registros cuyos nombres empiecen por la letra a se debe utilizar el operador LIKE que utiliza los patrones "%" (todos) y '_' (caracter).
 
 `SELECT * FROM usuario WHERE nombres LIKE '%A%'`
 
-![Consulta6](img/imagen7.png.png "consulta6")
+![Consulta6](img/imagen7.png "consulta6")
 
 7. si se desea obtener los registros cuyos nombres contengan la letra 'a'.
 
 `SELECT * FROM usuario WHERE nombre like 'a%'`
 
-![Consulta7](img/imagen8.png.png "consulta7")
+![Consulta7](img/imagen8.png "consulta7")
 
 8. si se desea obtener los registros donde la cuarta letra del nombre sea una 'a'.
 `SELECT * FROM usuario WHERE nombre LIKE '___a'`
 
-![Consulta8](img/imagen9.png.png "consulta8")
+![Consulta8](img/imagen9.png "consulta8")
 
 9. si se desea obtener los registros cuya identificacion este entre el inte clausula BETWEEN, que sirve para identificar un intervalo de valores
 
 `SELECT * FROM `usuario` WHERE identificacion BETWEEN '110' AND '150'`
 
-![Consulta9](img/imagen10.png.png "consulta9")
+![Consulta9](img/imagen10.png "consulta9")
 
 ## COMANDO DELTE
 
@@ -68,4 +68,24 @@ O se puede utilizar el operador OR
 
 `DELETE FROM `usuario` WHERE identificacion>130`
 
-![Consulta10](img/imagen11.png.png "consulta10")
+![Consulta10](img/imagen11.png "consulta10")
+
+## INNER JOIN
+
+Permite obtener datos de dos o mas tablas. Cuando se realiza la concatacion de las tablas, no necesariamente se debe mostrar todo los datos
+
+## TABLA PEDIDOS
+
+![Tabla Pedidos](img/tabla.png "tabla")
+
+12. Para visualizar los campos identificació, nombre, apellidos de la tabla usuario y nropedido, fecha de comprar, decha de vecimiento y observación se debe realizar la siguiente instruccion SQL:
+
+SELECT usuario.Identificación usuario.nombre, usuario.apellidos, pedido.nropedido, pedido.fechacompra, pedido.fechavence, pedidos.observacion FROM usuario INNER JOIN Pedidos ON usuario.Identificación = pedidos.Identificación
+
+![Tabla Pedidos](img/img_12.png "Consulta 12")
+
+13. Para visualizar todos los campos de las tablas usuarios y pdeidos donde identificacion sea mayor que 100 se dbe realizar la siguiente instruccion:
+
+`SELECT usuarios.* Pedidos.* FROM usuarios INNER JOIN Pedidos ON usuarios.identificacion = Pedidos.identificacion WHERE usuarios.identificacion>100`
+
+![consulta13](img/img_13.png "Consulta 13")
